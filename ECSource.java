@@ -33,13 +33,13 @@ class ECSource {
      */
     boolean isUnique = true;    // boolean to return, assumes list contains one unique value
 
-    if (head.next != null){
+    if (head.next != null){   // if next node isn't null
       if (!head.next.val.equals(head.val)){   // if next value != current value
           isUnique = false;     // there cannot be one value in list if two aren't equal
           return isUnique; 
       }  
       
-      isUnivalueListRecursive(head.next);
+      isUnivalueListRecursive(head.next);   // recursively call on next node to compare again
 
     }
     return isUnique;
